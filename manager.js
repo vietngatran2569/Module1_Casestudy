@@ -1,13 +1,12 @@
 let Product = new function () {
     this.pro = document.getElementById('product');
-    // this.products = ["Son 3CE", "Son Rose Matte", "Son Mac", "Son 3CE", "Son Rose Matte", "Son Mac"];
-    this.products=[];
+    this.products = ["Son 3CE", "Son Rose Matte", "Son Mac", "Son 3CE", "Son Rose Matte", "Son Mac"];
 
     this.setLocalStorageProduct = function () {
         localStorage.setItem("products", JSON.stringify(this.products))
     };
     this.getLocalStorageProduct = function () {
-        this.products = JSON.parse(localStorage.getItem("products"))
+        this.products = JSON.parse(localStorage.getItem("products") || '["Son 3CE", "Son Rose Matte", "Son Mac", "Son 3CE", "Son Rose Matte", "Son Mac"]')
     };
     this.cart = [];
     this.setLocalStorageCart = function () {
