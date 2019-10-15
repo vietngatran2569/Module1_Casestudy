@@ -1,6 +1,7 @@
 let Product = new function () {
     this.pro = document.getElementById('product');
-    this.products = ["Son 3CE", "Son Rose Matte", "Son Mac", "Son 3CE", "Son Rose Matte", "Son Mac"];
+    // this.products = ["Son 3CE", "Son Rose Matte", "Son Mac", "Son 3CE", "Son Rose Matte", "Son Mac"];
+    this.products=[];
 
     this.setLocalStorageProduct = function () {
         localStorage.setItem("products", JSON.stringify(this.products))
